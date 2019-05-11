@@ -1,0 +1,8 @@
+{
+  "name": "login-by-puppeteer",
+  "version": "1.0.0",
+  "description": "login by puppeteer usin cookie token",
+  "main": "index.js",
+  "author": "orange634nty",
+  "license": "MIT"
+}
