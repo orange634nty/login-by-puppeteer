@@ -16,16 +16,13 @@ const getCookie = async () => {
 };
 
 // cookieを使ってログイン
-// データを取得
+// タイトルを取得
 const getInfomation = async () => {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await loginWithCookie(page);
   await page.goto(url, {waitUntil: 'domcontentloaded'});
   let title = await page.$eval('#title', item => {
-      return item.textContent;
-  });
-  let body = await page.$eval('.note-main-content', item => {
       return item.textContent;
   });
   browser.close();
