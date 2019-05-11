@@ -4,5 +4,8 @@
   "description": "login by puppeteer using cookie token",
   "main": "index.js",
   "author": "orange634nty",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.15.0"
+  }
 }
