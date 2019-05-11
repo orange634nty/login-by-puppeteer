@@ -4,8 +4,8 @@ const fs = require('fs');
 const KIBELA_EMAIL = process.env.KIBELA_EMAIL;
 const KIBELA_PASS = process.env.KIBELA_PASS;
 
-const COOKIES_PATH = 'token/cookies_rem_kibela.json';
-const KIBELA_LOGIN_URL = 'https://xxxxxxxxx.kibe.la/signin'; // <- 適切に変更してください
+const COOKIES_PATH = 'token/cookies_kibela.json';
+const KIBELA_LOGIN_URL = 'https://xxx.kibe.la/signin'; // <- 適切に変更してください
 
 // ログインしてcookieを取得
 const getCookie = async () => {
