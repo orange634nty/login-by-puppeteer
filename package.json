@@ -7,5 +7,9 @@
   "license": "MIT",
   "dependencies": {
     "puppeteer": "^1.15.0"
+  },
+  "scripts": {
+    "getCookie": "node getCookie.js",
+    "getTitle": "node getTitle.js"
   }
 }
