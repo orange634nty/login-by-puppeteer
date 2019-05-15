@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const COOKIES_PATH = 'token/cookies_kibela.json';
+const COOKIES_PATH = 'token/cookies.json';
 
 // entry point
 (async () => {

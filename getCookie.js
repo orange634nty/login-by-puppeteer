@@ -1,17 +1,17 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const KIBELA_EMAIL = process.env.KIBELA_EMAIL;
-const KIBELA_PASS = process.env.KIBELA_PASS;
-const KIBELA_LOGIN_URL = process.env.KIBELA_LOGIN_URL;
+const ACCOUNT_EMAIL = process.env.ACCOUNT_EMAIL;
+const ACCOUNT_PASS = process.env.ACCOUNT_PASS;
+const LOGIN_URL = process.env.LOGIN_URL;
 
 const requireEnvs = [
-    KIBELA_EMAIL,
-    KIBELA_PASS,
-    KIBELA_LOGIN_URL
+    ACCOUNT_EMAIL,
+    ACCOUNT_PASS,
+    LOGIN_URL
 ];
 
-const COOKIES_PATH = 'token/cookies_kibela.json';
+const COOKIES_PATH = 'token/cookies.json';
 
 // entry point
 (async () => {
@@ -27,9 +27,9 @@ const COOKIES_PATH = 'token/cookies_kibela.json';
     const page = await browser.newPage();
 
     // パスワードを使ってログイン
-    await page.goto(KIBELA_LOGIN_URL, {waitUntil: 'domcontentloaded'});
-    await page.type('input[name="user[email]"]', KIBELA_EMAIL);
-    await page.type('input[name="user[password]"]', KIBELA_PASS);
+    await page.goto(LOGIN_URL, {waitUntil: 'domcontentloaded'});
+    await page.type('input[name="user[email]"]', ACCOUNT_EMAIL);
+    await page.type('input[name="user[password]"]', ACCOUNT_PASS);
     page.click('input[name="commit"]');
     await page.waitForNavigation({timeout: 60000, waitUntil: 'domcontentloaded'});
 
